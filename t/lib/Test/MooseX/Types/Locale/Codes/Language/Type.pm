@@ -1,0 +1,138 @@
+package Test::MooseX::Types::Locale::Codes::Language::Type;
+
+
+# ******************************************************************************
+# Dependency(-ies)
+# ******************************************************************************
+
+# ==============================================================================
+# Test Module(s)
+# ==============================================================================
+
+use Test::Able;
+
+# ==============================================================================
+# Parent Class(es)
+# ==============================================================================
+
+extends qw(
+    Test::MooseX::Types::Locale::Codes::Type
+);
+
+# ==============================================================================
+# Internal Module(s)
+# ==============================================================================
+
+use MooseX::Types::Locale::Codes::Language qw(
+    LanguageCode
+    LanguageName
+);
+
+
+# ******************************************************************************
+# Method(s)
+# ******************************************************************************
+
+# ==============================================================================
+# Builder(s)
+# ==============================================================================
+
+sub _build_namespace {
+    return 'MooseX::Types::Locale::Codes::Language';
+}
+
+sub _build_default_code_set {
+    return 'alpha2';
+}
+
+sub _build_exported_types {
+    return {
+        code => { factory => sub { LanguageCode(shift) },
+                  name    => 'LanguageCode',
+                  kind    => 'case sensitive language code' },
+        name => { factory => sub { LanguageName(shift) },
+                  name    => 'LanguageName',
+                  kind    => 'case sensitive language name' },
+    };
+}
+
+sub _build_aliases_of_code_set {
+    return {
+        'default'       => 'alpha2',
+        'alpha-2'       => 'alpha2',
+        'alpha-3'       => 'alpha3',
+        'bibliographic' => 'alpha3',
+        'terminologic'  => 'term',
+        'foobar'        => undef,
+    };
+}
+
+sub _build_validatees {
+    return {
+        'alpha-2' => [
+            [ code => [ 'en',      'en'      ] ],
+            [ code => [ 'EN',      'en'      ] ],
+            [ code => [ 'xx',      undef     ] ],
+            [ name => [ 'English', 'English' ] ],
+            [ name => [ 'ENGLISH', 'English' ] ],
+            [ name => [ 'xx',      undef     ] ],
+        ],
+        'alpha-3' => [
+            [ code => [ 'ger',    'ger'    ] ],
+            [ code => [ 'GER',    'ger'    ] ],
+            [ code => [ 'xxx',    undef    ] ],
+            [ name => [ 'German', 'German' ] ],
+            [ name => [ 'GERMAN', 'German' ] ],
+            [ name => [ 'xxx',    undef    ] ],
+        ],
+        'terminologic' => [
+            [ code => [ 'deu',    'deu'    ] ],
+            [ code => [ 'DEU',    'deu'    ] ],
+            [ code => [ 'xxx',    undef    ] ],
+            [ name => [ 'German', 'German' ] ],
+            [ name => [ 'GERMAN', 'German' ] ],
+            [ name => [ 'xxx',    undef    ] ],
+        ],
+    };
+}
+
+sub _build_dummy_locale_code {
+    return {
+        adder     => \&Locale::Codes::Language::add_language,
+        object    => LanguageCode,
+        type_name => 'LanguageCode',
+        code_set  => 'alpha2',
+        code      => '!!',
+        name      => 'Foobar',
+    };
+}
+
+
+# ******************************************************************************
+# Compile-Time Process(es)
+# ******************************************************************************
+
+__PACKAGE__->meta->make_immutable;
+
+
+# ******************************************************************************
+# Return True
+# ******************************************************************************
+
+1;
+__END__
+
+
+# ******************************************************************************
+# Documentation
+# ******************************************************************************
+
+=pod
+
+=encoding utf-8
+
+=head1 NAME
+
+Test::MooseX::Types::Locale::Codes::Language::Type
+
+=cut

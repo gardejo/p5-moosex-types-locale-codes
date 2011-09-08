@@ -1,0 +1,122 @@
+This file documents the revision history for distribution of Perl programming
+language extension `MooseX-Types-Locale-Codes`.
+
+
+VERSION HISTORY
+===============
+
+0.00 : Released on 2011-09-XX (Asia/Tokyo)
+------------------------------------------
+
+Initial release.
+It is general availability.
+
+### New Feature(s)
+
+-   Unificated (reorganized) following modules into the distribution.
+    See each predecessor distributions to learn about their revision history:
+    -   `MooseX::Types::Locale::Codes::Country`
+        from `MooseX::Types::Locale::Country` in `MooseX-Types-Locale-Country`
+        for `Locale::Codes::Country`
+    -   `MooseX::Types::Locale::Codes::Language`
+        from `MooseX::Types::Locale::Language` in `MooseX-Types-Locale-Language`
+        for `Locale::Codes::Language`
+-   Added new type constraints with coercions for the rest of locales:
+    -   `MooseX::Types::Locale::Codes::Currency`
+        for `Locale::Codes::Currency`
+    -   `MooseX::Types::Locale::Codes::LanguageExtension`
+        for `Locale::Codes::LangExt`
+    -   `MooseX::Types::Locale::Codes::LanguageVariation`
+        for `Locale::Codes::LangVar`
+    -   `MooseX::Types::Locale::Codes::Script`
+        for `Locale::Codes::Script`
+
+### Change(s)
+
+-   Incompatibly changed APIs:
+    Type constraints are now parameterizable.
+    You can use a parameter as a code set to any type constraint.
+    Formally you had to use several type constraints.
+    If you prefer the old APIs to new APIs, please use predecessor modules.
+
+### Improvement(s)
+
+-   Improved type coercions about `numeric` code sets.
+    For example, you can coerce '12' to '012' as a country code.
+
+### Bug Fix(es)
+
+-   Fixed the problem:
+    A type constraints do not follow changes in internal data of each
+    `Locale::Codes::*` modules by `rename_XXX`, `add_XXX`, `delete_XXX`,
+    `rename_XXX`, `add_XXX_code_alias` and `delete_XXX_code_alias`.
+    All modules in the distribution are no longer had cache of locale data.
+
+### Documentation
+
+-   Improved documents.
+
+### Test(s)
+
+-   Improved tests.
+
+
+META INFORMATION
+================
+
+Version Notation
+----------------
+
+Examples:
+
+-   `V.vv : Released on YYYY-MM-DD (Time Zone)`
+-   `V.vvrr : Released on YYYY-MM-DD (Time Zone)`
+-   `V.vv_dd : Released on YYYY-MM-DD (Time Zone)`
+
+### `V` : Major version number
+
+You will be recommended to upgrade the distribution *after carefully examining
+changes*.
+
+-   Added ambitious features
+-   Changed in APIs
+    (older API will be keeped to compatibility for a some period)
+-   ...
+
+### `vv` : Minor version number (in major version)
+
+You will be recommended to upgrade the distribution.
+
+-   Added several features
+-   Improved any features
+-   Fixed bugs
+-   ...
+
+### `rr` : Revision number (in minor version, on demand)
+
+You *would not need to update* the distribution.
+
+-   Improved tests
+-   Updated documents
+-   ...
+
+### `_dd` : Developer release number (in minor version, on demand)
+
+*This is unstable version*.
+The version is not general availability.
+Unless you are a developer, you will not be recommended to upgrade
+the distribution.
+
+-   Added experimental features
+-   Fixed bugs provisionally
+-   ...
+
+
+Document Format
+---------------
+
+This `Changes` file was formatted in *Markdown*.
+You can browse it as HTML expression by `markdown` command which is included
+with `Text::Markdown` module.
+
+    % markdown Changes
