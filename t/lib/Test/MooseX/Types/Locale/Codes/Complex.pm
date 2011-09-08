@@ -76,8 +76,6 @@ test plan => 'no_plan', complex => sub {
         my ($to_attribute,   $to_value  ) = @$to;
         my $locale;
 
-        $locale = $target_class->new;
-
         warning_is
             {
                 is(
