@@ -212,9 +212,11 @@ extension name of IANA Language Subtag Registry.
 For example, it allows not C<'International sign'> but C<'International Sign'>
 as C<'ils'>.
 
-If you turned C<coerce> option on, C<Str> will be same case as canonical name.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
 For example, C<'International sign language'> will convert to
-C<'International Sign'>.
+C<'International Sign'> and C<'Kiswahili'> will convert to
+C<'Swahili (individual language)'>.
 
 The parameter corresponds to L<C<alpha> language extension code set
 |Locale::Codes::LangExt/alpha> identified with the symbol

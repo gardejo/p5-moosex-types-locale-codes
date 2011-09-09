@@ -254,8 +254,10 @@ A subtype of C<Str>, which should be defined in B<case sensitive> language name
 of ISO 639-1.
 For example, it allows not C<'ESPERANTO'> but C<'Esperanto'> as C<'eo'>.
 
-If you turned C<coerce> option on, C<Str> will be same case as canonical name.
-For example, C<'ESPERANTO'> will convert to C<'Esperanto'>.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
+For example, C<'ESPERANTO'> will convert to C<'Esperanto'> and C<'Valencian'>
+will convert to C<'Catalan'>.
 
 The parameter corresponds to L<C<alpha-2> language code set
 |Locale::Codes::Language/alpha-2> identified with the symbol
@@ -271,8 +273,10 @@ A subtype of C<Str>, which should be defined in B<case sensitive> language name
 of ISO 639-2/B alpha-3.
 For example, it allows not C<'CHINESE'> but C<'Chinese'> as C<'chi'>.
 
-If you turned C<coerce> option on, C<Str> will be same case as canonical name.
-For example, C<'CHINESE'> will convert to C<'Chinese'>.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
+For example, C<'CHINESE'> will convert to C<'Chinese'> and C<'Low Saxon'> will
+convert to C<'Low German'>.
 
 The parameter corresponds to L<C<alpha-3> language code set
 |Locale::Codes::Language/alpha-3> identified with the symbol
@@ -292,8 +296,10 @@ A subtype of C<Str>, which should be defined in B<case sensitive> language code
 of ISO 639-2/T alpha-3.
 For example, it allows not C<'CHINESE'> but C<'Chinese'> as C<'zho'>.
 
-If you turned C<coerce> option on, C<Str> will be canonical case.
-For example, C<'CHINESE'> will convert to C<'Chinese'>.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
+For example, C<'CHINESE'> will convert to C<'Chinese'> and C<'Moldovan'> will
+convert to C<'Romanian'>.
 
 The parameter corresponds to L<C<term> language code set
 |Locale::Codes::Language/term> identified with the symbol C<LOCALE_LANG_TERM>.

@@ -213,9 +213,11 @@ variation name of IANA Language Subtag Registry.
 For example, it allows not C<'Hepburn Romanization'> but
 C<'Hepburn romanization'> as C<'hepburn'>.
 
-If you turned C<coerce> option on, C<Str> will be same case as canonical name.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
 For example, C<'Hepburn Romanization'> will convert to
-C<'Hepburn romanization'>.
+C<'Hepburn romanization'> and C<'Boni dialect'> will convert to
+C<'Aluku dialect'>.
 
 The parameter corresponds to L<C<alpha> language variation code set
 |Locale::Codes::LangVar/alpha> identified with the symbol

@@ -293,9 +293,11 @@ of ISO 3166-1 alpha-2.
 For example, it allows not C<'Heard Island And Mcdonald Islands'> but
 C<'Heard Island and McDonald Islands'> as C<'hm'>.
 
-If you turned C<coerce> option on, C<Str> will be same case as canonical name.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
 For example, C<'Heard Island And Mcdonald Islands'> will convert to
-C<'Heard Island and McDonald Islands'>.
+C<'Heard Island and McDonald Islands'> and C<'Vatican City'> will convert to
+C<'Holy See (Vatican City State)'>.
 
 The parameter corresponds to L<C<alpha-2> country code set
 |Locale::Codes::Country/alpha-2> identified with the symbol
@@ -311,8 +313,10 @@ A subtype of C<Str>, which should be defined in B<case sensitive> country name
 of ISO 3166-1 alpha-3.
 For example, it allows not C<'france'> but C<'France'> as C<'fra'>.
 
-If you turned C<coerce> option on, C<Str> will be same case as canonical name.
-For example, C<'france'> will convert to C<'France'>.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
+For example, C<'france'> will convert to C<'France'> and C<'United States'>
+will convert to C<'United States of America'>.
 
 The parameter corresponds to L<C<alpha-3> country code set
 |Locale::Codes::Country/alpha-3> identified with the symbol
@@ -328,8 +332,10 @@ A subtype of C<Str>, which should be defined in B<case sensitive> country name
 of ISO 3166-1.
 For example, it allows not C<'ALGERIA'> but C<'Algeria'> as C<'012'>.
 
-If you turned C<coerce> option on, C<Str> will be same case as canonical name.
-For example, C<'ALGERIA'> will convert to C<'Algeria'>.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
+For example, C<'ALGERIA'> will convert to C<'Algeria'> and C<'Great Britain'>
+will convert to C<'United Kingdom of Great Britain and Northern Ireland'>.
 
 The parameter corresponds to L<C<numeric> country code set
 |Locale::Codes::Country/numeric> identified with the symbol
@@ -345,8 +351,10 @@ A subtype of C<Str>, which should be defined in B<case sensitive> country name
 of FIPS 10.
 For example, it allows not C<'JAPAN'> but C<'Japan'> as C<'JA'>.
 
-If you turned C<coerce> option on, C<Str> will be canonical case.
-For example, C<'japan'> will convert to C<'Japan'>.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
+For example, C<'japan'> will convert to C<'Japan'> and C<'Great Britain'> will
+convert to C<'United Kingdom'>.
 
 The parameter corresponds to L<C<fips-10> country code set
 |Locale::Codes::Country/fips-10> identified with the symbol
@@ -367,8 +375,10 @@ of IANA domain name registry (ccTLD).
 For example, it allows not C<'united kingdom'> but C<'United Kingdom'> as
 C<'UK'>.
 
-If you turned C<coerce> option on, C<Str> will be canonical case.
-For example, C<'united kingdom'> will convert to C<'United Kingdom'>.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
+For example, C<'united kingdom'> will convert to C<'United Kingdom'> and
+C<'Republic of Turkey'> will convert to C<'Turkey'>.
 
 The parameter corresponds to L<C<dom> country code set
 |Locale::Codes::Country/dom> identified with the symbol C<LOCALE_CODE_DOM>.

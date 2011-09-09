@@ -386,8 +386,8 @@ Therefore, a type coercion provides the canonical name for you.
 
 =head2 Behaviors of Coercions are Only Canonization
 
-These type coercions are intended solely for B<canonization> of letter case or
-figures of numbers.
+These type coercions are intended solely for B<canonization> of letter case,
+aliased name or figures of numbers.
 In other words, they B<do not convert> codes and names by L<C<XXX2code()>
 |Locale::Codes::API/XXX2code>, L<C<code2XXX()>|Locale::Codes::API/code2XXX>
 and L<C<XXX_code2code()>|Locale::Codes::API/XXX_code2code> on

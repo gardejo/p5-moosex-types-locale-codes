@@ -227,8 +227,11 @@ A subtype of C<Str>, which should be defined in B<case sensitive> currency name
 of ISO 4217.
 For example, it allows not C<'YEN'> but C<'Yen'> as C<'JPY'>.
 
-If you turned C<coerce> option on, C<Str> will be same case as canonical name.
-For example, C<'YEN'> will convert to C<'Yen'>.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
+For example, C<'YEN'> will convert to C<'Yen'>
+(Note that L<Locale::Codes::Currency> has no aliased name of currency in
+C<'alpha'> currency code set yet).
 
 The parameter corresponds to L<C<alpha> currency code set
 |Locale::Codes::Currency/alpha> identified with the symbol
@@ -240,8 +243,11 @@ A subtype of C<Str>, which should be defined in B<case sensitive> currency name
 of ISO 4217.
 For example, it allows not C<'EURO'> but C<'Euro'> as C<'978'>.
 
-If you turned C<coerce> option on, C<Str> will be same case as canonical name.
-For example, C<'EURO'> will convert to C<'Euro'>.
+If you turned C<coerce> option on, C<Str> will be canonical (standard) name
+from different letter case and/or aliased name.
+For example, C<'EURO'> will convert to C<'Euro'>
+(Note that L<Locale::Codes::Currency> has no aliased name of currency in
+C<'numeric'> currency code set yet).
 
 The parameter corresponds to L<C<num> currency code set
 |Locale::Codes::Currency/num> identified with the symbol
