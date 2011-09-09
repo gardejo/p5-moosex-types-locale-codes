@@ -247,7 +247,7 @@ If you turned C<coerce> option on, C<Str> will be canonical (standard) name
 from different letter case and/or aliased name.
 For example, C<'EURO'> will convert to C<'Euro'>
 (Note that L<Locale::Codes::Currency> has no aliased name of currency in
-C<'numeric'> currency code set yet).
+C<'num'> currency code set yet).
 
 The parameter corresponds to L<C<num> currency code set
 |Locale::Codes::Currency/num> identified with the symbol

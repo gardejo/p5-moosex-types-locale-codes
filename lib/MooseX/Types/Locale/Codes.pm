@@ -197,8 +197,8 @@ C<LOCALE_CURR_ALPHA>.
 
 =head3 Currency{Code,Name}['numeric']
 
-The parameter corresponds to L<C<numeric> currency code set
-|Locale::Codes::Currency/numeric> identified with the symbol
+The parameter corresponds to L<C<num> currency code set
+|Locale::Codes::Currency/num> identified with the symbol
 C<LOCALE_CURR_NUMERIC>.
 
 =head3 Currency{Code,Name}['num']
