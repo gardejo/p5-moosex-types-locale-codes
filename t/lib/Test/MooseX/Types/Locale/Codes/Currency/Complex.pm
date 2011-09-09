@@ -36,6 +36,8 @@ sub _build_alignments {
     return [
         [ [ code => 'USD' ] => [ name => 'US Dollar' ] ],
         [ [ name => 'Yen' ] => [ code => 'JPY'       ] ],
+        [ [ code => 'JPY',
+            name => 'Yen' ] => undef                   ],
     ];
 }
 

@@ -36,6 +36,8 @@ sub _build_alignments {
     return [
         [ [ code => 'Latn'   ] => [ name => 'Latin' ] ],
         [ [ name => 'Arabic' ] => [ code => 'Arab'  ] ],
+        [ [ code => 'Arab',
+            name => 'Arabic' ] => undef               ],
     ];
 }
 

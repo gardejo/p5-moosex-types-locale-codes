@@ -36,6 +36,8 @@ sub _build_alignments {
     return [
         [ [ code => 'yue'                 ] => [ name => 'Yue Chinese' ] ],
         [ [ name => 'Mesopotamian Arabic' ] => [ code => 'acm'         ] ],
+        [ [ code => 'acm',
+            name => 'Mesopotamian Arabic' ] => undef                     ],
     ];
 }
 

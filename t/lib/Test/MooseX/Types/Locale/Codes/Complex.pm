@@ -64,77 +64,109 @@ has 'alignments' => (
 test plan => 'no_plan', complex => sub {
     my $self = shift;
 
-    $self->meta->current_method->plan(
-        7 * $self->count_alignments
-    );
-
+    my $plan = 0;
     my $target_class = $self->target_class;
 
     foreach my $alignment ( $self->all_alignments ) {
         my ($from, $to) = @$alignment;
-        my ($from_attribute, $from_value) = @$from;
-        my ($to_attribute,   $to_value  ) = @$to;
-        my $locale;
-
-        warning_is
-            {
-                is(
-                    exception {
-                        $locale = $target_class->new(
-                            $from_attribute => $from_value
-                        );
-                    },
-                    undef,
-                    'No exceptions for construction',
-                );
-            }
-            undef,
-            'No warnings for construction about constraint';
-
-        isa_ok(
-            $locale,
-            $target_class,
-        );
-
-        cmp_ok(
-            $locale->$from_attribute,
-            'eq',
-            $from_value,
-            sprintf(
-                'Attribute %s is %s (passed in constraint)',
-                $from_attribute,
-                $from_value,
-            ),
-        );
-
-        my $result;
-        warning_is
-            {
-                is(
-                    exception {
-                        $result = $locale->$to_attribute;
-                    },
-                    undef,
-                    'No exceptions for accessor',
-                );
-            }
-            undef,
-            'No warnings for construction about building';
-
-        cmp_ok(
-            $result,
-            'eq',
-            $to_value,
-            sprintf(
-                'Attribute %s is %s (passed in building)',
-                $to_attribute,
-                $to_value,
-            ),
-        );
+        if (defined $to) {
+            $self->_normally_construct($target_class, $from, $to);
+            $plan += 7;
+        }
+        else {
+            $self->_abnormally_construct($target_class, $from);
+            ++ $plan;
+        }
     }
+
+    $self->meta->current_method->plan($plan);
 
     return;
 };
+
+# ==============================================================================
+# Utility(-ies)
+# ==============================================================================
+
+sub _normally_construct {
+    my ($self, $target_class, $from, $to) = @_;
+
+    my ($from_attribute, $from_value) = @$from;
+    my ($to_attribute,   $to_value  ) = @$to;
+    my $locale;
+
+    warning_is
+        {
+            is(
+                exception {
+                    $locale = $target_class->new(
+                        $from_attribute => $from_value
+                    );
+                },
+                undef,
+                'No exceptions for construction',
+            );
+        }
+        undef,
+        'No warnings for construction about constraint';
+
+    isa_ok(
+        $locale,
+        $target_class,
+    );
+
+    cmp_ok(
+        $locale->$from_attribute,
+        'eq',
+        $from_value,
+        sprintf(
+            'Attribute %s is %s (passed in constraint)',
+            $from_attribute,
+            $from_value,
+        ),
+    );
+
+    my $result;
+    warning_is
+        {
+            is(
+                exception {
+                    $result = $locale->$to_attribute;
+                },
+                undef,
+                'No exceptions for accessor',
+            );
+        }
+        undef,
+        'No warnings for construction about building';
+
+    cmp_ok(
+        $result,
+        'eq',
+        $to_value,
+        sprintf(
+            'Attribute %s is %s (passed in building)',
+            $to_attribute,
+            $to_value,
+        ),
+    );
+
+    return;
+}
+
+sub _abnormally_construct {
+    my ($self, $target_class, $from) = @_;
+
+    isnt(
+        exception {
+            $target_class->new($from);
+        },
+        undef,
+        'Construtor throws an exception by mutually exclusive attributes',
+    );
+
+    return;
+}
 
 
 # ******************************************************************************

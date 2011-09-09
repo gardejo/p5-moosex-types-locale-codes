@@ -36,6 +36,8 @@ sub _build_alignments {
     return [
         [ [ code => 'en'       ] => [ name => 'English' ] ],
         [ [ name => 'Japanese' ] => [ code => 'ja'      ] ],
+        [ [ code => 'ja',
+            name => 'Japanese' ] => undef                 ],
     ];
 }
 

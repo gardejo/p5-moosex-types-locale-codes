@@ -36,6 +36,8 @@ sub _build_alignments {
     return [
         [ [ code => 'us'    ] => [ name => 'United States' ] ],
         [ [ name => 'Japan' ] => [ code => 'jp'            ] ],
+        [ [ code => 'jp',
+            name => 'Japan' ] => undef                       ],
     ];
 }
 

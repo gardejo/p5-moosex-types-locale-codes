@@ -36,6 +36,8 @@ sub _build_alignments {
     return [
         [ [ code => 'hepburn'   ] => [ name => 'Hepburn romanization' ] ],
         [ [ name => 'Valencian' ] => [ code => 'valencia'             ] ],
+        [ [ code => 'valencia',
+            name => 'Valencian' ] => undef                              ],
     ];
 }
 
