@@ -71,6 +71,10 @@ sub _build_validatees {
             [ code => [ 'xxxx',   undef    ] ],
             [ name => [ 'Resian', 'Resian' ] ],
             [ name => [ 'resian', 'Resian' ] ], # Canonize letter case
+            [ name => [
+                'Boni dialect',
+                'Aluku dialect'
+            ] ], # Canonize aliased name
             [ name => [ 'Xxxx',   undef    ] ],
         ],
     };

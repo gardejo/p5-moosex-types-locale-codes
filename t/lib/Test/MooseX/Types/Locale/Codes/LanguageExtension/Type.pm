@@ -66,12 +66,22 @@ sub _build_aliases_of_code_set {
 sub _build_validatees {
     return {
         'alpha' => [
-            [ code => [ 'yue',         'yue'         ] ],
-            [ code => [ 'Yue',         'yue'         ] ], # Canonize letter case
-            [ code => [ 'xx',          undef         ] ],
-            [ name => [ 'Yue Chinese', 'Yue Chinese' ] ],
-            [ name => [ 'Yue chinese', 'Yue Chinese' ] ], # Canonize letter case
-            [ name => [ 'Xxxx Xxxx',   undef         ] ],
+            [ code => [ 'yue',       'yue' ] ],
+            [ code => [ 'Yue',       'yue' ] ], # Canonize letter case
+            [ code => [ 'xx',        undef ] ],
+            [ name => [
+                'Yue Chinese',
+                'Yue Chinese'
+            ] ],
+            [ name => [
+                'Yue chinese',
+                'Yue Chinese'
+            ] ],                                # Canonize letter case
+            [ name => [
+                'Kiswahili',
+                'Swahili (individual language)'
+            ] ],                                # Canonize aliased name
+            [ name => [ 'Xxxx Xxxx', undef ] ],
         ],
     };
 }

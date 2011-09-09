@@ -72,6 +72,7 @@ sub _build_validatees {
             [ code => [ 'Xxxx',  undef   ] ],
             [ name => [ 'Latin', 'Latin' ] ],
             [ name => [ 'latin', 'Latin' ] ], # Canonize letter case
+            [ name => [ 'Kanji', 'Han'   ] ], # Canonize aliased name
             [ name => [ 'Xxx',   undef   ] ],
         ],
         'numeric' => [
@@ -85,6 +86,10 @@ sub _build_validatees {
             [ code => [ 999,      undef    ] ],
             [ name => [ 'Arabic', 'Arabic' ] ],
             [ name => [ 'arabic', 'Arabic' ] ], # Canonize letter case
+            [ name => [
+                'Kanji',
+                'Han (Hanzi, Kanji, Hanja)'
+            ] ],                                # Canonize aliased name
             [ name => [ 'Xxx',    undef    ] ],
         ],
     };

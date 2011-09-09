@@ -76,6 +76,10 @@ sub _build_validatees {
             [ code => [ 'xx',    undef   ] ],
             [ name => [ 'Japan', 'Japan' ] ],
             [ name => [ 'JAPAN', 'Japan' ] ], # Canonize letter case
+            [ name => [
+                'Vatican City',
+                'Holy See (Vatican City State)'
+            ] ],                              # Canonize aliased name
             [ name => [ 'Xxx',   undef   ] ],
         ],
         'alpha-3' => [
@@ -84,6 +88,10 @@ sub _build_validatees {
             [ code => [ 'xxx',     undef     ] ],
             [ name => [ 'Germany', 'Germany' ] ],
             [ name => [ 'GERMANY', 'Germany' ] ], # Canonize letter case
+            [ name => [
+                'United States',
+                'United States of America'
+            ] ],                                  # Canonize aliased name
             [ name => [ 'Xxx',     undef     ] ],
         ],
         'numeric' => [
@@ -97,6 +105,10 @@ sub _build_validatees {
             [ code => [ 999,      undef    ] ],
             [ name => [ 'France', 'France' ] ],
             [ name => [ 'FRANCE', 'France' ] ], # Canonize letter case
+            [ name => [
+                'Great Britain',
+                'United Kingdom of Great Britain and Northern Ireland'
+            ] ],                                # Canonize aliased name
             [ name => [ 'Xxx',    undef    ] ],
         ],
         'fips-10' => [
@@ -105,6 +117,10 @@ sub _build_validatees {
             [ code => [ 'XX',    undef   ] ],
             [ name => [ 'Japan', 'Japan' ] ],
             [ name => [ 'JAPAN', 'Japan' ] ], # Canonize letter case
+            [ name => [
+                'Great Britain',
+                'United Kingdom'
+            ] ],                              # Canonize aliased name
             [ name => [ 'Xxx',   undef   ] ],
         ],
         'domain' => [
@@ -113,6 +129,10 @@ sub _build_validatees {
             [ code => [ 'XX',     undef    ] ],
             [ name => [ 'Sweden', 'Sweden' ] ],
             [ name => [ 'SWEDEN', 'Sweden' ] ], # Canonize letter case
+            [ name => [
+                'Republic of Turkey',
+                'Turkey'
+            ] ],                                # Canonize aliased name
             [ name => [ 'Xxx',    undef    ] ],
         ],
     };

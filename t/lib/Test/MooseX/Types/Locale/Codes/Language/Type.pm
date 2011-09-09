@@ -70,28 +70,31 @@ sub _build_aliases_of_code_set {
 sub _build_validatees {
     return {
         'alpha-2' => [
-            [ code => [ 'en',      'en'      ] ],
-            [ code => [ 'EN',      'en'      ] ], # Canonize letter case
-            [ code => [ 'xx',      undef     ] ],
-            [ name => [ 'English', 'English' ] ],
-            [ name => [ 'ENGLISH', 'English' ] ], # Canonize letter case
-            [ name => [ 'xx',      undef     ] ],
+            [ code => [ 'en',        'en'      ] ],
+            [ code => [ 'EN',        'en'      ] ], # Canonize letter case
+            [ code => [ 'xx',        undef     ] ],
+            [ name => [ 'English',   'English' ] ],
+            [ name => [ 'ENGLISH',   'English' ] ], # Canonize letter case
+            [ name => [ 'Valencian', 'Catalan' ] ], # Canonize aliased name
+            [ name => [ 'xx',        undef     ] ],
         ],
         'alpha-3' => [
-            [ code => [ 'ger',    'ger'    ] ],
-            [ code => [ 'GER',    'ger'    ] ], # Canonize letter case
-            [ code => [ 'xxx',    undef    ] ],
-            [ name => [ 'German', 'German' ] ],
-            [ name => [ 'GERMAN', 'German' ] ], # Canonize letter case
-            [ name => [ 'xxx',    undef    ] ],
+            [ code => [ 'ger',       'ger'        ] ],
+            [ code => [ 'GER',       'ger'        ] ], # Canonize letter case
+            [ code => [ 'xxx',       undef        ] ],
+            [ name => [ 'German',    'German'     ] ],
+            [ name => [ 'GERMAN',    'German'     ] ], # Canonize letter case
+            [ name => [ 'Low Saxon', 'Low German' ] ], # Canonize aliased name
+            [ name => [ 'xxx',       undef        ] ],
         ],
         'terminologic' => [
-            [ code => [ 'deu',    'deu'    ] ],
-            [ code => [ 'DEU',    'deu'    ] ], # Canonize letter case
-            [ code => [ 'xxx',    undef    ] ],
-            [ name => [ 'German', 'German' ] ],
-            [ name => [ 'GERMAN', 'German' ] ], # Canonize letter case
-            [ name => [ 'xxx',    undef    ] ],
+            [ code => [ 'deu',      'deu'      ] ],
+            [ code => [ 'DEU',      'deu'      ] ], # Canonize letter case
+            [ code => [ 'xxx',      undef      ] ],
+            [ name => [ 'German',   'German'   ] ],
+            [ name => [ 'GERMAN',   'German'   ] ], # Canonize letter case
+            [ name => [ 'Moldovan', 'Romanian' ] ], # Canonize aliased name
+            [ name => [ 'xxx',      undef      ] ],
         ],
     };
 }

@@ -66,6 +66,8 @@ sub _build_aliases_of_code_set {
 
 sub _build_validatees {
     return {
+        # Note that Locale::Codes::Currency has no aliased name of currency
+        # in 'alpha' currency code set yet.
         'alpha' => [
             [ code => [ 'USD',       'USD'       ] ],
             [ code => [ 'usd',       'USD'       ] ], # Canonize letter case
@@ -74,6 +76,8 @@ sub _build_validatees {
             [ name => [ 'US dollar', 'US Dollar' ] ], # Canonize letter case
             [ name => [ 'xxx',       undef       ] ],
         ],
+        # Note that Locale::Codes::Currency has no aliased name of currency
+        # in 'num' currency code set yet.
         'numeric' => [
             [ code => [ '392', '392'  ] ],
             [ code => [ 392,   '392'  ] ],
