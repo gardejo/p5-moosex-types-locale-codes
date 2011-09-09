@@ -65,6 +65,8 @@ sub _build_aliases_of_code_set {
 }
 
 sub _build_validatees {
+    my $is_modern_locale = Locale::Codes::Script->VERSION >= 3.18;
+
     return {
         'alpha' => [
             [ code => [ 'Latn',  'Latn'  ] ],
@@ -72,7 +74,16 @@ sub _build_validatees {
             [ code => [ 'Xxxx',  undef   ] ],
             [ name => [ 'Latin', 'Latin' ] ],
             [ name => [ 'latin', 'Latin' ] ], # Canonize letter case
-            [ name => [ 'Kanji', 'Han'   ] ], # Canonize aliased name
+            [ name => [
+                # If the different keeps up, I may have to use a mock module.
+                $is_modern_locale ? (
+                    'Harappan',
+                    'Indus'
+                ) : (
+                    'Indus',
+                    'Indus (Harappan)'
+                )
+            ] ],                              # Canonize aliased name
             [ name => [ 'Xxx',   undef   ] ],
         ],
         'numeric' => [
@@ -87,7 +98,7 @@ sub _build_validatees {
             [ name => [ 'Arabic', 'Arabic' ] ],
             [ name => [ 'arabic', 'Arabic' ] ], # Canonize letter case
             [ name => [
-                'Kanji',
+                'Han',
                 'Han (Hanzi, Kanji, Hanja)'
             ] ],                                # Canonize aliased name
             [ name => [ 'Xxx',    undef    ] ],

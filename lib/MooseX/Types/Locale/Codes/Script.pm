@@ -229,8 +229,9 @@ For example, it allows not C<'hiragana'> but C<'Hiragana'> as C<'Hira'>.
 
 If you turned C<coerce> option on, C<Str> will be canonical (standard) name
 from different letter case and/or aliased name.
-For example, C<'hiragana'> will convert to C<'Hiragana'> and C<'Kanji'> will
-convert to C<'Han'>.
+For example, C<'hiragana'> will convert to C<'Hiragana'> and C<'Harappan'> will
+convert to C<'Indus'> (When version of L<Locale::Codes::Script> in your system
+is C<3.17> or earlier, C<'Indus'> will convert to C<'Indus (Harappan)'>).
 
 The parameter corresponds to L<C<alpha> script code set
 |Locale::Codes::Script/alpha> identified with the symbol
@@ -246,7 +247,7 @@ C<'070'>.
 If you turned C<coerce> option on, C<Str> will be canonical (standard) name
 from different letter case and/or aliased name.
 For example, C<'Egyptian Demotic'> will convert to C<'Egyptian demotic'> and
-C<'Kanji'> will convert to C<'Han (Hanzi, Kanji, Hanja)'>.
+C<'Han'> will convert to C<'Han (Hanzi, Kanji, Hanja)'>.
 
 The parameter corresponds to L<C<numeric> script code set
 |Locale::Codes::Script/numeric> identified with the symbol
