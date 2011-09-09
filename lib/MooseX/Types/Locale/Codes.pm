@@ -66,12 +66,12 @@ This document describes L<MooseX::Types::Locale::Codes> version C<0.00>.
     }
 
     my $locale = MyApp::Locale->new(
-        country  => 'us',
+        country  => 'US',
         currency => 'usd',
         language => 'EN',
         script   => 'latn',
     );
-    print $locale->country;  # 'US'   (letter case was canonized)
+    print $locale->country;  # 'us'   (letter case was canonized)
     print $locale->currency; # 'USD'  (letter case was canonized)
     print $locale->language; # 'en'   (letter case was canonized)
     print $locale->script;   # 'Latn' (letter case was canonized)
