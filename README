@@ -1,14 +1,14 @@
 NAME
-----
+====
 
 MooseX-Types-Locale-Codes (Perl module MooseX::Types::Locale::Codes)
 
 INSTALLATION
-------------
+============
 
 To install this distribution,
 
-first, to make Makefile, build this distribution and run tests
+first, to make `Makefile`, build this distribution and run tests
 by the following command:
 
     % cpan -t .
@@ -19,14 +19,14 @@ by the following command:
     % cpan -i .
 
 DEPENDENCIES
-------------
+============
 
-See "Makefile.PL".
+See `Makefile.PL`.
 
 DOCUMENTATION
--------------
+=============
 
-MooseX::Types::Locale::Codes documentation is available as in POD.
+`MooseX::Types::Locale::Codes` documentation is available as in POD.
 So you can do:
 
     % perldoc MooseX::Types::Locale::Codes
@@ -34,7 +34,7 @@ So you can do:
 to read the documentation online with your favorite pager.
 
 AUTHOR
-------
+======
 
 MORIYA Masaki, alias Gardejo
 
@@ -42,13 +42,13 @@ MORIYA Masaki, alias Gardejo
     http://gardejo.org/
 
 COPYRIGHT AND LICENSE
----------------------
+=====================
 
 Copyright (c) 2009-2011 MORIYA Masaki, alias Gardejo
 
 This distribution is free software;
 you can redistribute it and/or modify it under the same terms as Perl itself.
-See perlgpl and perlartistic.
+See `perlgpl` and `perlartistic`.
 
-The full text of the license can be found in the "LICENSE" file
+The full text of the license can be found in the `LICENSE` file
 included with this distribution.
