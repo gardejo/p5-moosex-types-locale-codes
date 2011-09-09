@@ -133,7 +133,7 @@ author_requires(
     'Test::DistManifest'                => '0',
     'Test::HasVersion'                  => '0',
 #   'Test::Kwalitee'                    => '0',
-        # is always die (but it was used by xt/kwalitee.t)
+        # is always die (but it was used by xt/bin/distribution/kwalitee.t)
     'Test::MinimumVersion'              => '0',
     'Test::NoTabs'                      => '0',
     'Test::Perl::Critic'                => '0',
