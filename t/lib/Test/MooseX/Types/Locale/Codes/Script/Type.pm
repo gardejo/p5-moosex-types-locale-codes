@@ -68,23 +68,23 @@ sub _build_validatees {
     return {
         'alpha' => [
             [ code => [ 'Latn',  'Latn'  ] ],
-            [ code => [ 'latn',  'Latn'  ] ],
+            [ code => [ 'latn',  'Latn'  ] ], # Canonize letter case
             [ code => [ 'Xxxx',  undef   ] ],
             [ name => [ 'Latin', 'Latin' ] ],
-            [ name => [ 'latin', 'Latin' ] ],
+            [ name => [ 'latin', 'Latin' ] ], # Canonize letter case
             [ name => [ 'Xxx',   undef   ] ],
         ],
         'numeric' => [
             [ code => [ '160',    '160'    ] ],
             [ code => [ 160,      '160'    ] ],
-            [ code => [ '40',     '040'    ] ],
-            [ code => [ 40,       '040'    ] ],
+            [ code => [ '40',     '040'    ] ], # Canonize figures of numbers
+            [ code => [ 40,       '040'    ] ], # Canonize figures of numbers
             [ code => [ '040',    '040'    ] ],
             [ code => [ 040,      undef    ] ],
             [ code => [ '999',    undef    ] ],
             [ code => [ 999,      undef    ] ],
             [ name => [ 'Arabic', 'Arabic' ] ],
-            [ name => [ 'arabic', 'Arabic' ] ],
+            [ name => [ 'arabic', 'Arabic' ] ], # Canonize letter case
             [ name => [ 'Xxx',    undef    ] ],
         ],
     };

@@ -68,10 +68,10 @@ sub _build_validatees {
     return {
         'alpha' => [
             [ code => [ 'USD',       'USD'       ] ],
-            [ code => [ 'usd',       'USD'       ] ],
+            [ code => [ 'usd',       'USD'       ] ], # Canonize letter case
             [ code => [ 'XXX',       undef       ] ],
             [ name => [ 'US Dollar', 'US Dollar' ] ],
-            [ name => [ 'US dollar', 'US Dollar' ] ],
+            [ name => [ 'US dollar', 'US Dollar' ] ], # Canonize letter case
             [ name => [ 'xxx',       undef       ] ],
         ],
         'numeric' => [
@@ -79,12 +79,12 @@ sub _build_validatees {
             [ code => [ 392,   '392'  ] ],
             [ code => [ '012', '012'  ] ],
             [ code => [ 012,   undef  ] ],
-            [ code => [ '12',  '012'  ] ],
-            [ code => [ 12,    '012'  ] ],
+            [ code => [ '12',  '012'  ] ], # Canonize figures of numbers
+            [ code => [ 12,    '012'  ] ], # Canonize figures of numbers
             [ code => [ '999', undef  ] ],
             [ code => [ 999,   undef  ] ],
             [ name => [ 'Yen', 'Yen'  ] ],
-            [ name => [ 'yen', 'Yen'  ] ],
+            [ name => [ 'yen', 'Yen'  ] ], # Canonize letter case
             [ name => [ 'Xxx', undef  ] ],
         ],
     };

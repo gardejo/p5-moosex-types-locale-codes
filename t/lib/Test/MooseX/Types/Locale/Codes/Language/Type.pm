@@ -71,26 +71,26 @@ sub _build_validatees {
     return {
         'alpha-2' => [
             [ code => [ 'en',      'en'      ] ],
-            [ code => [ 'EN',      'en'      ] ],
+            [ code => [ 'EN',      'en'      ] ], # Canonize letter case
             [ code => [ 'xx',      undef     ] ],
             [ name => [ 'English', 'English' ] ],
-            [ name => [ 'ENGLISH', 'English' ] ],
+            [ name => [ 'ENGLISH', 'English' ] ], # Canonize letter case
             [ name => [ 'xx',      undef     ] ],
         ],
         'alpha-3' => [
             [ code => [ 'ger',    'ger'    ] ],
-            [ code => [ 'GER',    'ger'    ] ],
+            [ code => [ 'GER',    'ger'    ] ], # Canonize letter case
             [ code => [ 'xxx',    undef    ] ],
             [ name => [ 'German', 'German' ] ],
-            [ name => [ 'GERMAN', 'German' ] ],
+            [ name => [ 'GERMAN', 'German' ] ], # Canonize letter case
             [ name => [ 'xxx',    undef    ] ],
         ],
         'terminologic' => [
             [ code => [ 'deu',    'deu'    ] ],
-            [ code => [ 'DEU',    'deu'    ] ],
+            [ code => [ 'DEU',    'deu'    ] ], # Canonize letter case
             [ code => [ 'xxx',    undef    ] ],
             [ name => [ 'German', 'German' ] ],
-            [ name => [ 'GERMAN', 'German' ] ],
+            [ name => [ 'GERMAN', 'German' ] ], # Canonize letter case
             [ name => [ 'xxx',    undef    ] ],
         ],
     };

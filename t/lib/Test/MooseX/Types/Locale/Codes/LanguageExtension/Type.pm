@@ -67,10 +67,10 @@ sub _build_validatees {
     return {
         'alpha' => [
             [ code => [ 'yue',         'yue'         ] ],
-            [ code => [ 'Yue',         'yue'         ] ],
+            [ code => [ 'Yue',         'yue'         ] ], # Canonize letter case
             [ code => [ 'xx',          undef         ] ],
             [ name => [ 'Yue Chinese', 'Yue Chinese' ] ],
-            [ name => [ 'Yue chinese', 'Yue Chinese' ] ],
+            [ name => [ 'Yue chinese', 'Yue Chinese' ] ], # Canonize letter case
             [ name => [ 'Xxxx Xxxx',   undef         ] ],
         ],
     };

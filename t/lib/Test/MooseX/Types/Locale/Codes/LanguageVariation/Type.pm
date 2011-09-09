@@ -67,10 +67,10 @@ sub _build_validatees {
     return {
         'alpha' => [
             [ code => [ 'rozaj',  'rozaj'  ] ],
-            [ code => [ 'Rozaj',  'rozaj'  ] ],
+            [ code => [ 'Rozaj',  'rozaj'  ] ], # Canonize letter case
             [ code => [ 'xxxx',   undef    ] ],
             [ name => [ 'Resian', 'Resian' ] ],
-            [ name => [ 'resian', 'Resian' ] ],
+            [ name => [ 'resian', 'Resian' ] ], # Canonize letter case
             [ name => [ 'Xxxx',   undef    ] ],
         ],
     };

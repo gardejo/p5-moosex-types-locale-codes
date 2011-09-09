@@ -72,18 +72,18 @@ sub _build_validatees {
     return {
         'alpha-2' => [
             [ code => [ 'jp',    'jp'    ] ],
-            [ code => [ 'JP',    'jp'    ] ],
+            [ code => [ 'JP',    'jp'    ] ], # Canonize letter case
             [ code => [ 'xx',    undef   ] ],
             [ name => [ 'Japan', 'Japan' ] ],
-            [ name => [ 'JAPAN', 'Japan' ] ],
+            [ name => [ 'JAPAN', 'Japan' ] ], # Canonize letter case
             [ name => [ 'Xxx',   undef   ] ],
         ],
         'alpha-3' => [
             [ code => [ 'deu',     'deu'     ] ],
-            [ code => [ 'DEU',     'deu'     ] ],
+            [ code => [ 'DEU',     'deu'     ] ], # Canonize letter case
             [ code => [ 'xxx',     undef     ] ],
             [ name => [ 'Germany', 'Germany' ] ],
-            [ name => [ 'GERMANY', 'Germany' ] ],
+            [ name => [ 'GERMANY', 'Germany' ] ], # Canonize letter case
             [ name => [ 'Xxx',     undef     ] ],
         ],
         'numeric' => [
@@ -91,28 +91,28 @@ sub _build_validatees {
             [ code => [ 250,      '250'    ] ],
             [ code => [ '031',    '031'    ] ],
             [ code => [ 031,      undef    ] ],
-            [ code => [ '31',     '031'    ] ],
-            [ code => [ 31,       '031'    ] ],
+            [ code => [ '31',     '031'    ] ], # Canonize figures of numbers
+            [ code => [ 31,       '031'    ] ], # Canonize figures of numbers
             [ code => [ '999',    undef    ] ],
             [ code => [ 999,      undef    ] ],
             [ name => [ 'France', 'France' ] ],
-            [ name => [ 'FRANCE', 'France' ] ],
+            [ name => [ 'FRANCE', 'France' ] ], # Canonize letter case
             [ name => [ 'Xxx',    undef    ] ],
         ],
         'fips-10' => [
             [ code => [ 'JA',    'JA'    ] ],
-            [ code => [ 'ja',    'JA'    ] ],
+            [ code => [ 'ja',    'JA'    ] ], # Canonize letter case
             [ code => [ 'XX',    undef   ] ],
             [ name => [ 'Japan', 'Japan' ] ],
-            [ name => [ 'JAPAN', 'Japan' ] ],
+            [ name => [ 'JAPAN', 'Japan' ] ], # Canonize letter case
             [ name => [ 'Xxx',   undef   ] ],
         ],
         'domain' => [
             [ code => [ 'SE',     'SE'     ] ],
-            [ code => [ 'se',     'SE'     ] ],
+            [ code => [ 'se',     'SE'     ] ], # Canonize letter case
             [ code => [ 'XX',     undef    ] ],
             [ name => [ 'Sweden', 'Sweden' ] ],
-            [ name => [ 'SWEDEN', 'Sweden' ] ],
+            [ name => [ 'SWEDEN', 'Sweden' ] ], # Canonize letter case
             [ name => [ 'Xxx',    undef    ] ],
         ],
     };
