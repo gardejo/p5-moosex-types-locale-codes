@@ -210,8 +210,9 @@ supplied C<$code_set>, otherwise returns C<false>.
 Note that C<$code> is B<case sensitive>.
 If C<$code_set> was not supplied, it uses the C<default> code set.
 
-It internally uses L<C<code_to_name()>|Locale::Codes::API/code2XXX> and
-L<C<name_to_code()>|Locale::Codes::API/XXX2code> converters which were
+It internally uses L<C<code_to_name()>
+|Locale::Codes::API/code2XXX ( CODE [,CODESET] )> and L<C<name_to_code()>
+|Locale::Codes::API/XXX2code ( NAME [,CODESET] )> converters which were
 provided by C<CONVERTER> constant on each MooseX::Types::Locale::Codes::*
 modules for the validation.
 
@@ -267,9 +268,10 @@ as optionally supplied C<$code_set> when a constraint (L<C<validate_code>
 |/validate_code>) fails, otherwise returns C<undef> when the coercion fails.
 If C<$code_set> was not supplied, it uses the C<default> code set.
 
-It internally uses the L<C<code_to_code()>|Locale::Codes::API/XXX_code2code>
-converter which was provided by C<CONVERTER> constant on each
-MooseX::Types::Locale::Codes::* modules for the coercion.
+It internally uses the L<C<code_to_code()>
+|Locale::Codes::API/XXX_code2code ( CODE ,CODESET ,CODESET2 )> converter which
+was provided by C<CONVERTER> constant on each MooseX::Types::Locale::Codes::*
+modules for the coercion.
 
 =head3 coerce_name
 
@@ -280,8 +282,9 @@ as optionally supplied C<$code_set> when a constraint (L<C<validate_name>
 |/validate_name>) fails, otherwise returns C<undef> when the coercion fails.
 If C<$code_set> was not supplied, it uses the C<default> code set.
 
-It internally uses L<C<name_to_code()>|Locale::Codes::API/XXX2code> and
-L<C<code_to_name()>|Locale::Codes::API/code2XXX> converters which were
+It internally uses L<C<name_to_code()>
+|Locale::Codes::API/XXX2code ( NAME [,CODESET] )> and L<C<code_to_name()>
+|Locale::Codes::API/code2XXX ( CODE [,CODESET] )> converters which were
 provided by C<CONVERTER> constant on each MooseX::Types::Locale::Codes::*
 modules for the coercion.
 
