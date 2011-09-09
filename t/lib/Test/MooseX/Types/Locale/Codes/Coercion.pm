@@ -36,7 +36,6 @@ has 'target_class' => (
     documentation   => 'blah blah blah',
 );
 
-# TODO: Commonalize test cases ( T::M::T::L::C::Language->new->validatees )
 has 'initializing_arguments' => (
     traits          => [qw(
         Array
@@ -46,8 +45,8 @@ has 'initializing_arguments' => (
     init_arg        => undef,
     lazy_build      => 1,
     handles         => {
-        count_initializing_arguments => 'count',
         all_initializing_arguments   => 'elements',
+        count_initializing_arguments => 'count',
     },
     documentation   => 'blah blah blah',
 );

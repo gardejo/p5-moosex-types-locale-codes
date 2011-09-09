@@ -36,7 +36,6 @@ has 'target_class' => (
     documentation   => 'blah blah blah',
 );
 
-# TODO: Commonalize test cases ( T::M::T::L::C::Language->new->validatees )
 has 'alignments' => (
     traits          => [qw(
         Array
@@ -46,8 +45,7 @@ has 'alignments' => (
     init_arg        => undef,
     lazy_build      => 1,
     handles         => {
-        count_alignments => 'count',
-        all_alignments   => 'elements',
+        all_alignments => 'elements',
     },
     documentation   => 'blah blah blah',
 );

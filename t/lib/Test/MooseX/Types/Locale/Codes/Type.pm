@@ -73,9 +73,9 @@ has 'exported_types' => (
     init_arg        => undef,
     lazy_build      => 1,
     handles         => {
-        all_exported_types    => 'values',
-        count_exported_types  => 'count',
-        get_exported_type     => 'get',
+        all_exported_types   => 'values',
+        count_exported_types => 'count',
+        get_exported_type    => 'get',
     },
     documentation   => 'The exported type constraints (Test cases)',
 );

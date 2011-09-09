@@ -2,8 +2,8 @@ use strict;
 use warnings;
 
 use Test::Requires {
-    'MooseX::Getopt'               => 0,
-    'MooseX::Types::LoadableClass' => 0,
+    'MooseX::Getopt'               => '0',
+    'MooseX::Types::LoadableClass' => '0',
 };
 
 use lib 't/lib';

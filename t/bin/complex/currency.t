@@ -2,9 +2,9 @@ use strict;
 use warnings;
 
 use Test::Requires {
-    '5.010_001'                    => 0,
-    'Data::Validator'              => 0,
-    'MooseX::Types::LoadableClass' => 0,
+    '5.010_001'                    => undef,
+    'Data::Validator'              => '0',
+    'MooseX::Types::LoadableClass' => '0',
 };
 
 use lib 't/lib';
