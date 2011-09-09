@@ -13,11 +13,11 @@ __END__
 
 =head1 NAME
 
-manifest.t - Testing MANIFEST and MANIFEST.SKIP
+manifest.t - Testing MANIFEST and MANIFEST.SKIP in the distribution
 
 =head1 NOTES
 
-When making the distribution, MANIFEST.SKIP isn't copied, so check in the
+When making the distribution, F<MANIFEST.SKIP> isn't copied, so check in the
 parent directory, which is the actual distribution root, as well.
 
 =cut

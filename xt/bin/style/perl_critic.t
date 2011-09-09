@@ -17,7 +17,7 @@ __END__
 
 =head1 NAME
 
-perl_critic.t - Testing that modules complies with Perl::Critic
+perl_critic.t - Testing that all modules comply with Perl::Critic
 
 =head1 SEE ALSO
 

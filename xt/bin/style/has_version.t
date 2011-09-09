@@ -13,7 +13,7 @@ __END__
 
 =head1 NAME
 
-has_version.t - Testing version numbers
+has_version.t - Testing version numbers of all modules
 
 =head1 SEE ALSO
 

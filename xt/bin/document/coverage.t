@@ -25,7 +25,7 @@ __END__
 
 =head1 NAME
 
-coverage.t - Testing coverage of documentation
+coverage.t - Testing coverage of documentation of all modules
 
 =head1 NOTES
 

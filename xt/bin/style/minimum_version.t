@@ -18,7 +18,7 @@ __END__
 
 =head1 NAME
 
-has_version.t - Testing version numbers
+minimum_version.t - Testing perl version numbers of all modules
 
 =head1 SEE ALSO
 

@@ -13,7 +13,7 @@ __END__
 
 =head1 NAME
 
-changes.t - Testing change log
+changes.t - Testing change log in the distribution
 
 =head1 SEE ALSO
 

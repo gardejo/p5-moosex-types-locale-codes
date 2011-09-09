@@ -17,7 +17,7 @@ __END__
 
 =head1 NAME
 
-syntax.t - Testing POD syntax of modules in distribution
+syntax.t - Testing POD syntax of all modules
 
 =head1 SEE ALSO
 

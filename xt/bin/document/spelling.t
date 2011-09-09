@@ -25,7 +25,7 @@ __END__
 
 =head1 NAME
 
-spelling.t - Testing POD spelling
+spelling.t - Testing POD spelling of all modules
 
 =head1 NOTES
 

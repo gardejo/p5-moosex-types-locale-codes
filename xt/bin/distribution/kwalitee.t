@@ -17,7 +17,7 @@ __END__
 
 =head1 NAME
 
-kwalitee.t - Testing that distribution complies with a kwalitee gauge
+kwalitee.t - Testing that the distribution complies with a kwalitee gauge
 
 =head1 SEE ALSO
 

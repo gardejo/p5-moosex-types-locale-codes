@@ -13,7 +13,7 @@ __END__
 
 =head1 NAME
 
-synopsis.t - Testing POD synopsises
+synopsis.t - Testing POD synopsises of all modules
 
 =head1 SEE ALSO
 

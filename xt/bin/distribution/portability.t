@@ -28,7 +28,7 @@ __END__
 
 =head1 NAME
 
-portability.t - Testing file names portability
+portability.t - Testing file names portability of all manifested files
 
 =head1 SEE ALSO
 

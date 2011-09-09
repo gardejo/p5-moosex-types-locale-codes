@@ -13,7 +13,7 @@ __END__
 
 =head1 NAME
 
-meta.t - Testing that META.yml file matches the current specification
+meta.t - Testing that META.yml in the distribution matches the current specification
 
 =head1 SEE ALSO
 
