@@ -521,9 +521,33 @@ Or, use a different solution (with L<MooseX::Attribute::Dependent>):
 =head2 Option Types for L<MooseX::Getopt>
 
 These modules provide you the optional type mappings for L<MooseX::Getopt>
-when it was installed.
+when it was installed in your system.
 Then you can use the option types for L<Getopt::Long> without your handmaid
 type mappings.
+
+    {
+        package MyApp::Locale::Language::WithOption;
+
+        use Moose;
+
+        use MooseX::Types::Locale::Codes::Language qw(
+            LanguageCode
+            LanguageName
+        );
+        with qw(
+            MooseX::Getopt
+        );
+
+        has 'code' => (isa => LanguageCode, coerce => 1, is => 'rw');
+        has 'name' => (isa => LanguageName, coerce => 1, is => 'rw');
+
+        __PACKAGE__->meta->make_immutable;
+    }
+
+    local @ARGV = ('--code', 'en', '--name', 'English');
+    my $language = MyApp::Locale::Language::WithOption->new_with_options;
+    print $language->code; # 'en'
+    print $language->name; # 'English'
 
 All types are assigned to C<String> (C<"=s">) option types.
 Maybe only a minority of types should assigned to C<Integer> (C<"=i">) types,
