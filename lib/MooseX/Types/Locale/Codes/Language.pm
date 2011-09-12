@@ -47,7 +47,7 @@ use parent qw(MooseX::Types::Locale::Codes::Base);
 # Class Variable(s) and Constant(s)
 # ******************************************************************************
 
-our $VERSION = "0.00";
+our $VERSION = '0.00';
 
 use constant CANONICAL_CODE_SET_OF => {
     'alpha-2'       => 'alpha2',
