@@ -48,6 +48,7 @@ use parent qw(MooseX::Types::Locale::Codes::Base);
 # ******************************************************************************
 
 our $VERSION = '0.00';
+our $AUTHORITY = 'cpan:MORIYA';
 
 use constant CANONICAL_CODE_SET_OF => {
     'default' => 'alpha',
