@@ -31,7 +31,7 @@ use Scalar::Util qw(blessed);
 # Class Variable(s) and Constant(s)
 # ******************************************************************************
 
-our $VERSION = '0.00';
+our $VERSION = '0.00'; ## no critic (ProhibitInterpolationOfLiterals)
 our $AUTHORITY = 'cpan:MORIYA';
 
 
@@ -43,7 +43,7 @@ our $AUTHORITY = 'cpan:MORIYA';
 # Validator(s) : Protected Method(s)
 # ==============================================================================
 
-sub validate_code {
+sub validate_code { ## no critic (RequireArgUnpacking)
     my $invocant = shift;
 
     return $invocant->_validate(
@@ -53,7 +53,7 @@ sub validate_code {
     );
 }
 
-sub validate_name {
+sub validate_name { ## no critic (RequireArgUnpacking)
     my $invocant = shift;
 
     return $invocant->_validate(
@@ -67,13 +67,13 @@ sub validate_name {
 # Message Generator(s) : Protected Method(s)
 # ==============================================================================
 
-sub message_for_code {
+sub message_for_code { ## no critic (RequireArgUnpacking)
     my $invocant = shift;
 
     return $invocant->_message('code', @_);
 }
 
-sub message_for_name {
+sub message_for_name { ## no critic (RequireArgUnpacking)
     my $invocant = shift;
 
     return $invocant->_message('name', @_);

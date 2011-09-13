@@ -18,7 +18,7 @@ use warnings;
 # Class Constant(s) and Variable(s)
 # ******************************************************************************
 
-our $VERSION = '0.00';
+our $VERSION = '0.00'; ## no critic (ProhibitInterpolationOfLiterals)
 our $AUTHORITY = 'cpan:MORIYA';
 
 
