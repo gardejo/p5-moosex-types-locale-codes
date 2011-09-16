@@ -13,8 +13,6 @@ allow = for if unless until
 lib_sections = NAME | SYNOPSIS | DESCRIPTION | INCOMPATIBILITIES | BUGS AND LIMITATIONS | SUPPORT | AUTHOR | COPYRIGHT AND LICENSE
 script_sections = NAME | USAGE | OPTIONS | EXIT STATUS | AUTHOR | COPYRIGHT AND LICENSE
 
-[-Miscellanea::ProhibitUselessNoCritic]
-
 [-Miscellanea::RequireRcsKeywords]
 
 [Modules::ProhibitExcessMainComplexity]
