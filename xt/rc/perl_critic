@@ -22,10 +22,10 @@ script_sections = NAME | USAGE | OPTIONS | EXIT STATUS | AUTHOR | COPYRIGHT AND 
 [-Miscellanea::RequireRcsKeywords]
 
 [Modules::ProhibitExcessMainComplexity]
-max_mccabe = 15
+max_mccabe = 10
 
 [Subroutines::ProhibitExcessComplexity]
-max_mccabe = 15
+max_mccabe = 10
 
 [TestingAndDebugging::RequireUseStrict]
 equivalent_modules = MooseX::Types
