@@ -705,19 +705,19 @@ All of inhabitants of L<Moose> ecosystem.
 
 =item *
 
-B<Canon Research Centre Europe>, B<Michael Hennecke>, B<Neil Bowers> and
-B<Sullivan Beck> wrote L<Locale::Codes>, which this module uses.
+B<Canon Research Centre Europe>, B<Michael Hennecke>, B<Neil Bowers> (neilb)
+and B<Sullivan Beck> (sbeck) wrote L<Locale::Codes>, which this module uses.
 
 =item *
 
-B<John Napiorkowski> was interested in my humble report that
+B<John Napiorkowski> (jjnapiork) was interested in my humble report that
 L<MooseX::Types::Parameterizable> works incompletely with recent version of
 L<Moose>.
 
 =item *
 
-B<Shawn M Moore> enlightened me as I<coercion> can also be used as a countable
-noun in L<Moose> context.
+B<Shawn M Moore> (sartak) enlightened me as I<coercion> can also be used as a
+countable noun in L<Moose> context.
 
 =item *
 
