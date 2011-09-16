@@ -719,6 +719,11 @@ L<Moose>.
 B<Shawn M Moore> enlightened me as I<coercion> can also be used as a countable
 noun in L<Moose> context.
 
+=item *
+
+B<Jeffrey Ryan Thalhammer> (thaljef) enlightened me as a correct usage of
+L<Perl::Critic>.
+
 =back
 
 =head1 AUTHOR
