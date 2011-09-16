@@ -695,6 +695,38 @@ This module is maintained using I<Git>.
 You can get the latest version from
 L<git://github.com/gardejo/p5-moosex-types-locale-codes.git>.
 
+=head1 DLSIP STATUS
+
+DLSIP stands for Development stage, Language used, Support level, Interface
+style and Public license.
+See L<http://search.cpan.org/dlsip> for further information.
+This distribution is C<Rpdrp> (L<http://search.cpan.org/dlsip?Rpdrp>).
+
+=over 4
+
+=item D - Development Stage
+
+R - Released
+
+=item L - Language Used
+
+p - Perl-only, no compiler needed, should be platform independent
+
+=item S - Support Level
+
+d - Developer
+
+=item I - Interface Style
+
+r - some use of unblessed L<References|perlref> or L<ties|perltie>
+
+=item P - Public License
+
+p - Standard-Perl: user may choose between L<GPL|perlgpl> and L<Artistic
+|perlartistic>
+
+=back
+
 =head1 ACKNOWLEDGEMENTS
 
 =over 4
