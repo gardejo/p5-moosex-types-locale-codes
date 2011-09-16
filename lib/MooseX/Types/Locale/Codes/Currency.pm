@@ -112,8 +112,11 @@ coerce CurrencyName,
 # ******************************************************************************
 
 if ( eval { require MooseX::Getopt } ) {
-    MooseX::Getopt::OptionTypeMap->add_option_type_to_map($_, '=s')
-        for (CurrencyCode, CurrencyName);
+    foreach my $constraint (CurrencyCode, CurrencyName) {
+        MooseX::Getopt::OptionTypeMap->add_option_type_to_map(
+            $constraint => '=s',
+        );
+    }
 }
 
 

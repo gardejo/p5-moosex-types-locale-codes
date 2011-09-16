@@ -112,8 +112,11 @@ coerce ScriptName,
 # ******************************************************************************
 
 if ( eval { require MooseX::Getopt } ) {
-    MooseX::Getopt::OptionTypeMap->add_option_type_to_map($_, '=s')
-        for (ScriptCode, ScriptName);
+    foreach my $constraint (ScriptCode, ScriptName) {
+        MooseX::Getopt::OptionTypeMap->add_option_type_to_map(
+            $constraint => '=s',
+        );
+    }
 }
 
 

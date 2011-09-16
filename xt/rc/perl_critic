@@ -9,7 +9,7 @@ severity = 1
 # TODO: Use it!
 
 [ControlStructures::ProhibitPostfixControls]
-allow = for if unless until
+allow = if unless
 # Because PBP says that if these controls are convenient.
 
 [-Documentation::PodSpelling]

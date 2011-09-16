@@ -115,8 +115,11 @@ coerce LanguageName,
 # ******************************************************************************
 
 if ( eval { require MooseX::Getopt } ) {
-    MooseX::Getopt::OptionTypeMap->add_option_type_to_map($_, '=s')
-        for (LanguageCode, LanguageName);
+    foreach my $constraint (LanguageCode, LanguageName) {
+        MooseX::Getopt::OptionTypeMap->add_option_type_to_map(
+            $constraint => '=s',
+        );
+    }
 }
 
 
