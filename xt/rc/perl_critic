@@ -7,6 +7,12 @@ severity = 1
 [ControlStructures::ProhibitPostfixControls]
 allow = for if unless until
 
+[-Documentation::PodSpelling]
+# xt/bin/document/spelling.t which uses Test::Spelling effects the same as:
+# [Documentation::PodSpelling]
+# spell_command = aspell list -l en
+# stop_words_file = xt/rc/stop_words
+
 [-Documentation::RequirePodLinksIncludeText]
 
 [Documentation::RequirePodSections]
