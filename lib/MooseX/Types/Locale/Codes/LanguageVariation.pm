@@ -110,13 +110,10 @@ coerce LanguageVariationName,
 # Optionally Add Getopt Option Type
 # ******************************************************************************
 
-if ( eval { require MooseX::Getopt } ) {
-    foreach my $constraint (LanguageVariationCode, LanguageVariationName) {
-        MooseX::Getopt::OptionTypeMap->add_option_type_to_map(
-            $constraint => '=s',
-        );
-    }
-}
+__PACKAGE__->add_option_type_to_map(
+    LanguageVariationCode,
+    LanguageVariationName,
+);
 
 
 # ******************************************************************************

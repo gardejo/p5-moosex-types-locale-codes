@@ -105,6 +105,25 @@ sub coerce_name {
 }
 
 # ==============================================================================
+# Utility(-ies) : Protected Method(s)
+# ==============================================================================
+
+sub add_option_type_to_map {
+    my ($invocant, @constraints) = @_;
+
+    return
+        unless eval { require MooseX::Getopt };
+
+    foreach my $constraint (@constraints) {
+        MooseX::Getopt::OptionTypeMap->add_option_type_to_map(
+            $constraint => '=s',
+        );
+    }
+
+    return;
+}
+
+# ==============================================================================
 # Private Method(s)
 # ==============================================================================
 
@@ -288,6 +307,16 @@ It internally uses L<C<name_to_code()>
 |Locale::Codes::API/code2XXX ( CODE [,CODESET] )> converters which were
 provided by C<CONVERTER> constant on each MooseX::Types::Locale::Codes::*
 modules for the coercion.
+
+=head2 Utility
+
+=head3 add_option_type_to_map
+
+    $invocant->add_option_type_to_map(@constraints);
+
+It attempts to add option type for supplied variadic C<@constraints> to
+mappings for L<MooseX::Getopt> when it was installed in your system.
+All types are assigned to C<String> (C<"=s">) option types.
 
 =head1 INCOMPATIBILITIES
 
