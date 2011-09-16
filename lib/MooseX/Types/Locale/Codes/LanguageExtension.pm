@@ -47,7 +47,7 @@ use parent qw(MooseX::Types::Locale::Codes::Base);
 # Class Variable(s) and Constant(s)
 # ******************************************************************************
 
-our $VERSION = '0.00'; ## no critic (ProhibitInterpolationOfLiterals)
+our $VERSION = '0.00';
 our $AUTHORITY = 'cpan:MORIYA';
 
 use constant CANONICAL_CODE_SET_OF => {

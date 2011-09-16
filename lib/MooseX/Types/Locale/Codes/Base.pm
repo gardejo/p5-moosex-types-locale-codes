@@ -31,7 +31,7 @@ use Scalar::Util qw(blessed);
 # Class Variable(s) and Constant(s)
 # ******************************************************************************
 
-our $VERSION = '0.00'; ## no critic (ProhibitInterpolationOfLiterals)
+our $VERSION = '0.00';
 our $AUTHORITY = 'cpan:MORIYA';
 
 
