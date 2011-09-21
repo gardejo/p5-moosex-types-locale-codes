@@ -313,7 +313,7 @@ MooseX::Types::Locale::Codes
 =head2 History
 
 This module was B<NOT> previously known as L<MooseX::Types::Locale::Currency>
-which was made by Caleb Cushing.
+which was made by Caleb Cushing (xeno).
 Please pay careful attention to the difference between the two modules.
 
 =head1 SEE ALSO
