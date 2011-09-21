@@ -147,6 +147,7 @@ author_requires(
     'Test::Synopsis'                    => '0',
     'Test::UseAllModules'               => '0.12',
         # for "under" option and cooperation with Test::NoWarnings
+    'Test::Vars'                        => '0',
 );
 
 

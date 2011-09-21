@@ -109,7 +109,7 @@ sub coerce_name {
 # ==============================================================================
 
 sub add_option_type_to_map {
-    my ($invocant, @constraints) = @_;
+    my (undef, @constraints) = @_;
 
     return
         unless eval { require MooseX::Getopt };
