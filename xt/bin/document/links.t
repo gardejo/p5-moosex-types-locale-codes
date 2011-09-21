@@ -20,7 +20,10 @@ links.t - Testing presence of invalid links in POD of all modules
 
 =head1 NOTES
 
-=head2 Probably we initialize any CPAN client before the testing
+=head2 Probably we should initialize any CPAN client before the testing
+
+This test script uses L<CPAN> as a CPAN client.
+So we should initialize it before the testing.
 
 For example,
 
