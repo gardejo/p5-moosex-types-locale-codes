@@ -13,7 +13,7 @@ __END__
 
 =head1 NAME
 
-no_tabs.t - Testing presence of tabs of all modules
+tabs.t - Testing presence of tabs of all modules
 
 =head1 NOTES
 
