@@ -142,6 +142,7 @@ author_requires(
         # is vaguely modern version
     'Test::Pod::Coverage'               => '0.08',
         # for all_pod_coverage_ok()
+    'Test::Pod::LinkCheck'              => '0',
     'Test::Portability::Files'          => '0',
 #   'Test::Spelling'                    => '0',
         # is hard to be used in Win32
