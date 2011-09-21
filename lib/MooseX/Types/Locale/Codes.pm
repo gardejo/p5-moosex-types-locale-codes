@@ -697,8 +697,8 @@ L<git://github.com/gardejo/p5-moosex-types-locale-codes.git>.
 
 =head1 DLSIP STATUS
 
-DLSIP stands for Development stage, Language used, Support level, Interface
-style and Public license.
+DLSIP (a.k.a. DSLIP) stands for B<D>evelopment Stage, B<L>anguage Used,
+B<S>upport Level, B<I>nterface Style and B<P>ublic License.
 See L<http://search.cpan.org/dlsip> for further information.
 This distribution is C<Rpdrp> (L<http://search.cpan.org/dlsip?Rpdrp>).
 
