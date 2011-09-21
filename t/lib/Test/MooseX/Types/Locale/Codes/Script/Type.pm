@@ -72,6 +72,8 @@ sub _build_validatees {
             [ code => [ 'Latn',  'Latn'  ] ],
             [ code => [ 'latn',  'Latn'  ] ], # Canonize letter case
             [ code => [ 'Xxxx',  undef   ] ],
+            [ code => [ 'Latin', 'Latn'  ], 'TODO' ], # Convert code into name
+            [ code => [ 'latin', 'Latn'  ], 'TODO' ], # Convert code into name
             [ name => [ 'Latin', 'Latin' ] ],
             [ name => [ 'latin', 'Latin' ] ], # Canonize letter case
             [ name => [
@@ -95,6 +97,8 @@ sub _build_validatees {
             [ code => [ 040,      undef    ] ],
             [ code => [ '999',    undef    ] ],
             [ code => [ 999,      undef    ] ],
+            [ code => [ 'Arabic', '160'    ], 'TODO' ], # Convert code into name
+            [ code => [ 'arabic', '160'    ], 'TODO' ], # Convert code into name
             [ name => [ 'Arabic', 'Arabic' ] ],
             [ name => [ 'arabic', 'Arabic' ] ], # Canonize letter case
             [ name => [

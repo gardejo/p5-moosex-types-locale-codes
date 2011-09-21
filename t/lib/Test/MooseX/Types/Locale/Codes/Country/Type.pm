@@ -74,6 +74,8 @@ sub _build_validatees {
             [ code => [ 'jp',    'jp'    ] ],
             [ code => [ 'JP',    'jp'    ] ], # Canonize letter case
             [ code => [ 'xx',    undef   ] ],
+            [ code => [ 'Japan', 'jp'    ], 'TODO' ], # Convert code into name
+            [ code => [ 'JAPAN', 'jp'    ], 'TODO' ], # Convert code into name
             [ name => [ 'Japan', 'Japan' ] ],
             [ name => [ 'JAPAN', 'Japan' ] ], # Canonize letter case
             [ name => [
@@ -86,6 +88,8 @@ sub _build_validatees {
             [ code => [ 'deu',     'deu'     ] ],
             [ code => [ 'DEU',     'deu'     ] ], # Canonize letter case
             [ code => [ 'xxx',     undef     ] ],
+            [ code => [ 'Germany', 'deu'     ], 'TODO' ], # Convert code into name
+            [ code => [ 'GERMANY', 'deu'     ], 'TODO' ], # Convert code into name
             [ name => [ 'Germany', 'Germany' ] ],
             [ name => [ 'GERMANY', 'Germany' ] ], # Canonize letter case
             [ name => [
@@ -103,6 +107,8 @@ sub _build_validatees {
             [ code => [ 31,       '031'    ] ], # Canonize figures of numbers
             [ code => [ '999',    undef    ] ],
             [ code => [ 999,      undef    ] ],
+            [ code => [ 'France', '250'    ], 'TODO' ], # Convert code into name
+            [ code => [ 'FRANCE', '250'    ], 'TODO' ], # Convert code into name
             [ name => [ 'France', 'France' ] ],
             [ name => [ 'FRANCE', 'France' ] ], # Canonize letter case
             [ name => [
@@ -115,6 +121,8 @@ sub _build_validatees {
             [ code => [ 'JA',    'JA'    ] ],
             [ code => [ 'ja',    'JA'    ] ], # Canonize letter case
             [ code => [ 'XX',    undef   ] ],
+            [ code => [ 'Japan', 'JA'    ], 'TODO' ], # Convert code into name
+            [ code => [ 'JAPAN', 'JA'    ], 'TODO' ], # Convert code into name
             [ name => [ 'Japan', 'Japan' ] ],
             [ name => [ 'JAPAN', 'Japan' ] ], # Canonize letter case
             [ name => [
@@ -127,6 +135,8 @@ sub _build_validatees {
             [ code => [ 'SE',     'SE'     ] ],
             [ code => [ 'se',     'SE'     ] ], # Canonize letter case
             [ code => [ 'XX',     undef    ] ],
+            [ code => [ 'Sweden', 'SE'     ], 'TODO' ], # Convert code into name
+            [ code => [ 'SWEDEN', 'SE'     ], 'TODO' ], # Convert code into name
             [ name => [ 'Sweden', 'Sweden' ] ],
             [ name => [ 'SWEDEN', 'Sweden' ] ], # Canonize letter case
             [ name => [

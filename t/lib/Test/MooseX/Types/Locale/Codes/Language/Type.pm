@@ -73,6 +73,8 @@ sub _build_validatees {
             [ code => [ 'en',        'en'      ] ],
             [ code => [ 'EN',        'en'      ] ], # Canonize letter case
             [ code => [ 'xx',        undef     ] ],
+            [ code => [ 'English',   'en'      ], 'TODO' ], # Convert code into name
+            [ code => [ 'ENGLISH',   'en'      ], 'TODO' ], # Convert code into name
             [ name => [ 'English',   'English' ] ],
             [ name => [ 'ENGLISH',   'English' ] ], # Canonize letter case
             [ name => [ 'Valencian', 'Catalan' ] ], # Canonize aliased name
@@ -82,6 +84,8 @@ sub _build_validatees {
             [ code => [ 'ger',       'ger'        ] ],
             [ code => [ 'GER',       'ger'        ] ], # Canonize letter case
             [ code => [ 'xxx',       undef        ] ],
+            [ code => [ 'German',    'ger'        ], 'TODO' ], # Convert code into name
+            [ code => [ 'GERMAN',    'ger'        ], 'TODO' ], # Convert code into name
             [ name => [ 'German',    'German'     ] ],
             [ name => [ 'GERMAN',    'German'     ] ], # Canonize letter case
             [ name => [ 'Low Saxon', 'Low German' ] ], # Canonize aliased name
@@ -91,6 +95,8 @@ sub _build_validatees {
             [ code => [ 'deu',      'deu'      ] ],
             [ code => [ 'DEU',      'deu'      ] ], # Canonize letter case
             [ code => [ 'xxx',      undef      ] ],
+            [ code => [ 'German',   'deu'      ], 'TODO' ], # Convert code into name
+            [ code => [ 'GERMAN',   'deu'      ], 'TODO' ], # Convert code into name
             [ name => [ 'German',   'German'   ] ],
             [ name => [ 'GERMAN',   'German'   ] ], # Canonize letter case
             [ name => [ 'Moldovan', 'Romanian' ] ], # Canonize aliased name

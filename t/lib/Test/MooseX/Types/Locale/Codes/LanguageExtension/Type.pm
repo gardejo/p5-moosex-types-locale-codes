@@ -69,6 +69,14 @@ sub _build_validatees {
             [ code => [ 'yue',       'yue' ] ],
             [ code => [ 'Yue',       'yue' ] ], # Canonize letter case
             [ code => [ 'xx',        undef ] ],
+            [ code => [
+                'Yue Chinese',
+                'yue'
+            ], 'TODO' ],                                # Convert code into name
+            [ code => [
+                'Yue chinese',
+                'yue'
+            ], 'TODO' ],                                # Convert code into name
             [ name => [
                 'Yue Chinese',
                 'Yue Chinese'

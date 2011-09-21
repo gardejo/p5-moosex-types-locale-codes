@@ -385,43 +385,49 @@ sub _check_code_or_name {
 sub _coerce_code_or_name {
     my ($self, $code_set, $validatee) = @_;
 
-    my ($kind, $from_to) = @$validatee;
+    my ($kind, $from_to, $todo) = @$validatee;
     my ($from, $to)      = @$from_to;
     my $exported_type    = $self->get_exported_type($kind);
     my $expected_true    = defined $to;
 
-    my $coerced_value;
-    warning_is
-        { eval {
-            $coerced_value
-                = $exported_type->{factory}->([$code_set])->coerce($from);
-        } }
-        undef,
-        sprintf(
-            'No warnings for coerce from %s to %s as a %s of %s for %s',
-            dump($from),
-            dump($to),
-            $kind,
-            $code_set,
-            $exported_type->{name},
+    TODO: {
+        local $TODO = 'Because a constraint does not support additional '
+                    . 'coercion, which converts name to code yet'
+            if $todo;
+
+        my $coerced_value;
+        warning_is
+            { eval {
+                $coerced_value
+                    = $exported_type->{factory}->([$code_set])->coerce($from);
+            } }
+            undef,
+            sprintf(
+                'No warnings for coerce from %s to %s as a %s of %s for %s',
+                dump($from),
+                dump($to),
+                $kind,
+                $code_set,
+                $exported_type->{name},
+            );
+
+        my $got_true = defined $to
+                    && defined $coerced_value
+                    && $coerced_value eq $to;
+
+        ok(
+            ( $expected_true ^ ! $got_true ),
+            sprintf(
+                'Coerce from %s to %s as a %s of %s for %s: expect %s',
+                dump($from),
+                dump($to),
+                $kind,
+                $code_set,
+                $exported_type->{name},
+                ( $expected_true ? 'coerced' : 'failure' ),
+            )
         );
-
-    my $got_true = defined $to
-                && defined $coerced_value
-                && $coerced_value eq $to;
-
-    ok(
-        ( $expected_true ^ ! $got_true ),
-        sprintf(
-            'Coerce from %s to %s as a %s of %s for %s: expect %s',
-            dump($from),
-            dump($to),
-            $kind,
-            $code_set,
-            $exported_type->{name},
-            ( $expected_true ? 'coerced' : 'failure' ),
-        )
-    );
+    };
 
     return;
 }

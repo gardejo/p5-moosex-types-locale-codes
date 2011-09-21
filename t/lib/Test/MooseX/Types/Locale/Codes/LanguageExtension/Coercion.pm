@@ -36,6 +36,8 @@ sub _build_initializing_arguments {
     return [
         [ code => [ 'yue',         'yue'         ] ],
         [ code => [ 'Yue',         'yue'         ] ],
+        [ code => [ 'Yue Chinese', 'yue'         ] ],
+        [ code => [ 'Yue chinese', 'yue'         ] ],
         [ name => [ 'Yue Chinese', 'Yue Chinese' ] ],
         [ name => [ 'Yue chinese', 'Yue Chinese' ] ],
     ];

@@ -72,6 +72,8 @@ sub _build_validatees {
             [ code => [ 'USD',       'USD'       ] ],
             [ code => [ 'usd',       'USD'       ] ], # Canonize letter case
             [ code => [ 'XXX',       undef       ] ],
+            [ code => [ 'US Dollar', 'USD'       ], 'TODO' ], # Convert code into name
+            [ code => [ 'US dollar', 'USD'       ], 'TODO' ], # Convert code into name
             [ name => [ 'US Dollar', 'US Dollar' ] ],
             [ name => [ 'US dollar', 'US Dollar' ] ], # Canonize letter case
             [ name => [ 'xxx',       undef       ] ],
@@ -87,6 +89,8 @@ sub _build_validatees {
             [ code => [ 12,    '012'  ] ], # Canonize figures of numbers
             [ code => [ '999', undef  ] ],
             [ code => [ 999,   undef  ] ],
+            [ code => [ 'Yen', '392'  ], 'TODO' ], # Convert code into name
+            [ code => [ 'yen', '392'  ], 'TODO' ], # Convert code into name
             [ name => [ 'Yen', 'Yen'  ] ],
             [ name => [ 'yen', 'Yen'  ] ], # Canonize letter case
             [ name => [ 'Xxx', undef  ] ],

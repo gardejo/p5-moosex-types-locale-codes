@@ -36,6 +36,8 @@ sub _build_initializing_arguments {
     return [
         [ code => [ 'Latn',  'Latn'  ] ],
         [ code => [ 'latn',  'Latn'  ] ],
+        [ code => [ 'Latin', 'Latn'  ] ],
+        [ code => [ 'latin', 'Latn'  ] ],
         [ name => [ 'Latin', 'Latin' ] ],
         [ name => [ 'latin', 'Latin' ] ],
     ];

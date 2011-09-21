@@ -80,7 +80,9 @@ test plan => 'no_plan', coercion => sub {
                 TODO: {
                     local $TODO = 'Because a constraint which made by '
                                 . 'MooseX::Types::Parameterizable does not '
-                                . 'work with recent Moose';
+                                . 'work with recent Moose, or, '
+                                . 'a constraint does not support additional '
+                                . 'coercion, which converts name to code yet.';
 
                     is(
                         $exception = exception {
@@ -117,7 +119,7 @@ test plan => 'no_plan', coercion => sub {
                     $from,
                 ),
             );
-        }
+        };
     }
 
     return;

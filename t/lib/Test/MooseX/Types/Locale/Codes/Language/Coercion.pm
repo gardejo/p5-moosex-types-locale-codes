@@ -36,6 +36,8 @@ sub _build_initializing_arguments {
     return [
         [ code => [ 'en',      'en'      ] ],
         [ code => [ 'En',      'en'      ] ],
+        [ code => [ 'English', 'en'      ] ],
+        [ code => [ 'english', 'en'      ] ],
         [ name => [ 'English', 'English' ] ],
         [ name => [ 'english', 'English' ] ],
     ];

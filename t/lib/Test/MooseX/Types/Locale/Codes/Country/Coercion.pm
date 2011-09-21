@@ -36,6 +36,8 @@ sub _build_initializing_arguments {
     return [
         [ code => [ 'us',            'us'            ] ],
         [ code => [ 'US',            'us'            ] ],
+        [ code => [ 'United States', 'us'            ] ],
+        [ code => [ 'United states', 'us'            ] ],
         [ name => [ 'United States', 'United States' ] ],
         [ name => [ 'United states', 'United States' ] ],
     ];

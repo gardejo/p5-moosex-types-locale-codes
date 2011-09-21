@@ -36,6 +36,8 @@ sub _build_initializing_arguments {
     return [
         [ code => [ 'USD',       'USD'       ] ],
         [ code => [ 'usd',       'USD'       ] ],
+        [ code => [ 'US Dollar', 'USD'       ] ],
+        [ code => [ 'US dollar', 'USD'       ] ],
         [ name => [ 'US Dollar', 'US Dollar' ] ],
         [ name => [ 'US dollar', 'US Dollar' ] ],
     ];

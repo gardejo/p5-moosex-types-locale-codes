@@ -69,6 +69,8 @@ sub _build_validatees {
             [ code => [ 'rozaj',  'rozaj'  ] ],
             [ code => [ 'Rozaj',  'rozaj'  ] ], # Canonize letter case
             [ code => [ 'xxxx',   undef    ] ],
+            [ code => [ 'Resian', 'rozaj'  ], 'TODO' ], # Convert code into name
+            [ code => [ 'resian', 'rozaj'  ], 'TODO' ], # Convert code into name
             [ name => [ 'Resian', 'Resian' ] ],
             [ name => [ 'resian', 'Resian' ] ], # Canonize letter case
             [ name => [

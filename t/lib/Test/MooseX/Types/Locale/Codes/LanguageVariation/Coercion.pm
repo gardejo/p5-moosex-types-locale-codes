@@ -36,6 +36,8 @@ sub _build_initializing_arguments {
     return [
         [ code => [ 'rozaj',  'rozaj'  ] ],
         [ code => [ 'Rozaj',  'rozaj'  ] ],
+        [ code => [ 'Resian', 'rozaj'  ] ],
+        [ code => [ 'resian', 'rozaj'  ] ],
         [ name => [ 'Resian', 'Resian' ] ],
         [ name => [ 'resian', 'Resian' ] ],
     ];
