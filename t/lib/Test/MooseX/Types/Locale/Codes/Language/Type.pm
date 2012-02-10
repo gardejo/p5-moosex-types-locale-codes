@@ -42,7 +42,7 @@ sub _build_namespace {
 }
 
 sub _build_default_code_set {
-    return 'alpha2';
+    return 'alpha-2';
 }
 
 sub _build_exported_types {
@@ -58,10 +58,10 @@ sub _build_exported_types {
 
 sub _build_aliases_of_code_set {
     return {
-        'default'       => 'alpha2',
-        'alpha-2'       => 'alpha2',
-        'alpha-3'       => 'alpha3',
-        'bibliographic' => 'alpha3',
+        'default'       => 'alpha-2',
+        'alpha2'        => 'alpha-2',
+        'alpha3'        => 'alpha-3',
+        'bibliographic' => 'alpha-3',
         'terminologic'  => 'term',
         'foobar'        => undef,
     };
@@ -104,7 +104,7 @@ sub _build_dummy_locale_code {
         adder     => \&Locale::Codes::Language::add_language,
         object    => LanguageCode,
         type_name => 'LanguageCode',
-        code_set  => 'alpha2',
+        code_set  => 'alpha-2',
         code      => '!!',
         name      => 'Foobar',
     };

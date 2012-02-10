@@ -52,8 +52,8 @@ requires(
         # is included by perl 5
 #   'Devel::PartialDump'                => '0.13',
         # is depended on by MooseX-Types-Parameterizable
-    'Locale::Codes'                     => '3.17',
-        # for new (LangExt and LangVar) locales and namespace reorganization
+    'Locale::Codes'                     => '3.20',
+        # for new locales and namespace reorganization and new codeset API
     'Moose'                             => '1.06',
         # MooseX-Types depends on Moose 1.06+
     'MooseX::Types'                     => '0.19',

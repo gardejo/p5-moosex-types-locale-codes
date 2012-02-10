@@ -34,7 +34,7 @@ use MooseX::Types::Parameterizable 0.07 qw(Parameterizable); ### TODO: 0.08
 # General Module(s)
 # ==============================================================================
 
-use Locale::Codes::LangExt 3.17 qw();
+use Locale::Codes::LangExt 3.20 qw();
 
 # ==============================================================================
 # Internal Module(s)

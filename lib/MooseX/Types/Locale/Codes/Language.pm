@@ -34,7 +34,7 @@ use MooseX::Types::Parameterizable 0.07 qw(Parameterizable); ### TODO: 0.08
 # General Module(s)
 # ==============================================================================
 
-use Locale::Codes::Language 3.17 qw();
+use Locale::Codes::Language 3.20 qw();
 
 # ==============================================================================
 # Internal Module(s)
@@ -51,10 +51,10 @@ our $VERSION = '0.00';
 our $AUTHORITY = 'cpan:MORIYA';
 
 use constant CANONICAL_CODE_SET_OF => {
-    'alpha-2'       => 'alpha2',
-    'alpha-3'       => 'alpha3',
-    'bibliographic' => 'alpha3',
-    'default'       => 'alpha2',
+    'alpha2'        => 'alpha-2',
+    'alpha3'        => 'alpha-3',
+    'bibliographic' => 'alpha-3',
+    'default'       => 'alpha-2',
     'terminologic'  => 'term',
 };
 
