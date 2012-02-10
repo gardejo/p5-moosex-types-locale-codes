@@ -231,10 +231,11 @@ Note that C<$code> is B<case sensitive>.
 If C<$code_set> was not supplied, it uses the C<default> code set.
 
 It internally uses L<C<code_to_name()>
-|Locale::Codes::API/code2XXX ( CODE [,CODESET] )> and L<C<name_to_code()>
-|Locale::Codes::API/XXX2code ( NAME [,CODESET] )> converters which were
-provided by C<CONVERTER> constant on each MooseX::Types::Locale::Codes::*
-modules for the validation.
+|Locale::Codes::API/code2XXX ( CODE [,CODESET] [,'retired'] )> and
+L<C<name_to_code()>
+|Locale::Codes::API/XXX2code ( NAME [,CODESET] [,'retired'] )> converters
+which were provided by C<CONVERTER> constant on each
+MooseX::Types::Locale::Codes::* modules for the validation.
 
 It internally converts from aliased C<$code_set> into canonical C<$code_set> by
 C<CANONICAL_CODE_SET_OF> constant on each MooseX::Types::Locale::Codes::*
@@ -303,9 +304,10 @@ as optionally supplied C<$code_set> when a constraint (L<C<validate_name>
 If C<$code_set> was not supplied, it uses the C<default> code set.
 
 It internally uses L<C<name_to_code()>
-|Locale::Codes::API/XXX2code ( NAME [,CODESET] )> and L<C<code_to_name()>
-|Locale::Codes::API/code2XXX ( CODE [,CODESET] )> converters which were
-provided by C<CONVERTER> constant on each MooseX::Types::Locale::Codes::*
+|Locale::Codes::API/XXX2code ( NAME [,CODESET] [,'retired'] )> and
+L<C<code_to_name()>
+|Locale::Codes::API/code2XXX ( CODE [,CODESET] [,'retired'] )> converters which
+were provided by C<CONVERTER> constant on each MooseX::Types::Locale::Codes::*
 modules for the coercion.
 
 =head2 Utility

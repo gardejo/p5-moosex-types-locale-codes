@@ -390,8 +390,9 @@ Therefore, a type coercion provides the canonical name for you.
 These type coercions are intended solely for B<canonization> of letter case,
 aliased name or figures of numbers.
 In other words, they B<do not convert> codes and names by L<C<XXX2code()>
-|Locale::Codes::API/XXX2code ( NAME [,CODESET] )>, L<C<code2XXX()>
-|Locale::Codes::API/code2XXX ( CODE [,CODESET] )> and L<C<XXX_code2code()>
+|Locale::Codes::API/XXX2code ( NAME [,CODESET] [,'retired'] )>, L<C<code2XXX()>
+|Locale::Codes::API/code2XXX ( CODE [,CODESET] [,'retired'] )> and
+L<C<XXX_code2code()>
 |Locale::Codes::API/XXX_code2code ( CODE ,CODESET ,CODESET2 )> on
 L<Locale::Codes::API>.
 
