@@ -28,7 +28,7 @@ use namespace::autoclean;
 
 use MooseX::Types -declare => [qw(ScriptCode ScriptName)];
 use MooseX::Types::Moose qw(Maybe Str);
-use MooseX::Types::Parameterizable 0.07 qw(Parameterizable); ### TODO: 0.08
+use MooseX::Types::Parameterizable 0.07 qw(Parameterizable); ### TODO: 0.09
 
 # ==============================================================================
 # General Module(s)

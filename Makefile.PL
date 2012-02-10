@@ -59,7 +59,7 @@ requires(
     'MooseX::Types'                     => '0.19',
 #   'MooseX::Types::Moose'              => '0.19',
         # is included by MooseX-Types
-    'MooseX::Types::Parameterizable'    => '0.07', ### TODO: 0.08
+    'MooseX::Types::Parameterizable'    => '0.07', ### TODO: 0.09
         # for correct coercion with modern Moose (2.0100-TRIAL +)
 #   'Scalar::Util'                      => '1.19',
         # is depended on by Moose
