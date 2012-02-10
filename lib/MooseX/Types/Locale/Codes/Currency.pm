@@ -384,7 +384,7 @@ L<http://gardejo.org/>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2009-2011 MORIYA Masaki, alias Gardejo
+Copyright (c) 2009-2012 MORIYA Masaki, alias Gardejo
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
