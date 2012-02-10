@@ -7,8 +7,8 @@ use Test::Requires {
 };
 
 use lib 't/lib';
-use Test::MooseX::Types::Locale::Codes::Script::Getopt;
+use Test::MooseX::Types::Locale::Codes::Currency::Getopt;
 
-Test::MooseX::Types::Locale::Codes::Script::Getopt->run_tests;
+Test::MooseX::Types::Locale::Codes::Currency::Getopt->run_tests;
 
 __END__
