@@ -295,6 +295,38 @@ The parameter corresponds to L<C<alpha> language extension code set
 |Locale::Codes::LangExt/alpha> identified with the symbol
 C<LOCALE_LANGEXT_ALPHA>.
 
+=head2 L<MooseX::Types::Locale::Codes::LanguageFamily>
+
+The following parameterizable type constraints were designed to work with the
+suite of codes and names from L<Locale::Codes::LangFam>.
+The parameters correspond to L<code sets of language families
+|Locale::Codes::LangFam/SUPPORTED CODE SETS>.
+
+=over 4
+
+=item *
+
+L<LanguageFamilyCode[`a]
+|MooseX::Types::Locale::Codes::LanguageFamily/LanguageFamilyCode[`a]>
+
+=item *
+
+L<LanguageFamilyName[`a]
+|MooseX::Types::Locale::Codes::LanguageFamily/LanguageFamilyName[`a]>
+
+=back
+
+=head3 LanguageFamily{Code,Name}
+
+An alias of L<LanguageFamily{Code,Name}['alpha']
+|/LanguageFamily{Code,Name}['alpha']>.
+
+=head3 LanguageFamily{Code,Name}['alpha']
+
+The parameter corresponds to L<C<alpha> language family code set
+|Locale::Codes::LangFam/alpha> identified with the symbol
+C<LOCALE_LANGFAM_ALPHA>.
+
 =head2 L<MooseX::Types::Locale::Codes::LanguageVariation>
 
 The following parameterizable type constraints were designed to work with the
@@ -595,6 +627,10 @@ L<Locale::Codes::Language>
 =item *
 
 L<Locale::Codes::LangExt>
+
+=item *
+
+L<Locale::Codes::LangFam>
 
 =item *
 
